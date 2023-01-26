@@ -23,7 +23,8 @@ namespace Pagination
             var records = new List<Record>();
             for (var i = offset; i < offset + PageSize && i < TotalRecords; i++)
                 records.Add(new Record { Index = i });
-            dataGridView1.DataSource = records;
+            listBox1.DataSource = records;
+            listBox1.DisplayMember = "Index";
         }
 
         private class Record
