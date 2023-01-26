@@ -9,7 +9,7 @@ namespace Pagination
     public partial class Form1 : Form
     {
         private const int TotalRecords = 66;
-        private const int PageSize = 10;
+        private const int PageSize = 15;
 
         public Form1()
         {
