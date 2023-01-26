@@ -14,8 +14,6 @@ namespace Pagination
         public Form1()
         {
             InitializeComponent();
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Index" });
-            bindingNavigator1.BindingSource = bindingSource1;
             bindingSource1.DataSource = new PageOffsetList();
         }
 

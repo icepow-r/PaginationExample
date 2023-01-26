@@ -44,6 +44,7 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.Index = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -53,6 +54,8 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Index});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 25);
             this.dataGridView1.Name = "dataGridView1";
@@ -62,6 +65,7 @@
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bindingNavigator1.BindingSource = this.bindingSource1;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -177,6 +181,12 @@
             // 
             this.bindingSource1.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
             // 
+            // Index
+            // 
+            this.Index.DataPropertyName = "Index";
+            this.Index.HeaderText = "Index";
+            this.Index.Name = "Index";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,6 +222,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Index;
     }
 }
 
