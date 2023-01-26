@@ -8,8 +8,8 @@ namespace Pagination
 {
     public partial class Form1 : Form
     {
-        private const int totalRecords = 66;
-        private const int pageSize = 10;
+        private const int TotalRecords = 66;
+        private const int PageSize = 10;
 
         public Form1()
         {
@@ -21,24 +21,24 @@ namespace Pagination
         {
             var offset = (int)bindingSource1.Current;
             var records = new List<Record>();
-            for (var i = offset; i < offset + pageSize && i < totalRecords; i++)
+            for (var i = offset; i < offset + PageSize && i < TotalRecords; i++)
                 records.Add(new Record { Index = i });
             dataGridView1.DataSource = records;
         }
 
-        class Record
+        private class Record
         {
             public int Index { get; set; }
         }
 
-        class PageOffsetList : IListSource
+        private class PageOffsetList : IListSource
         {
             public bool ContainsListCollection { get; protected set; }
 
             public IList GetList()
             {
                 var pageOffsets = new List<int>();
-                for (var offset = 0; offset < totalRecords; offset += pageSize)
+                for (var offset = 0; offset < TotalRecords; offset += PageSize)
                     pageOffsets.Add(offset);
                 return pageOffsets;
             }
